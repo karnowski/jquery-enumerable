@@ -53,6 +53,17 @@
       return $.inject(enumerable, 0, function(accumulator) {
         return accumulator + this;
       });
+    },
+
+    detect: function(enumerable, callback) {
+      var result = null;
+      $.each(enumerable, function(index) {
+        if (callback.call(this)) {
+          result = this;
+          return false;
+        }
+      });
+      return result;
     }
   };
 
