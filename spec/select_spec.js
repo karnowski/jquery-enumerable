@@ -1,10 +1,10 @@
 Screw.Unit(function() {
-  describe("select", function() {
+  describe("_select", function() {
     var callStatic   = function(enumerator, callback) { 
-      return jQuery.select(enumerator, callback) 
+      return jQuery._select(enumerator, callback)
     }
     var callIterator = function(enumerator, callback) { 
-      return jQuery(enumerator).select(callback);
+      return jQuery(enumerator)._select(callback);
     }
 
     Screw.Unit.enumerableContext(callStatic, callIterator, function() {

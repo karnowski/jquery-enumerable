@@ -20,7 +20,7 @@
     },
 
     // $([1,2,3]).select(function() { return this % 2 == 1 }) // => [1, 3]
-    select: function(enumerable, callback) {
+    _select: function(enumerable, callback) {
       var result = [];
       $.each(enumerable, function(index) {
         if (callback.call(this, index))
@@ -31,7 +31,7 @@
 
     // $([1,2,3]).reject(function() { return this % 2 == 1 }) // => [2]
     reject: function(enumerable, callback) {
-      return $.select(enumerable, negate(callback));
+      return $._select(enumerable, negate(callback));
     },
 
     // $([1,2]).any(function() { return this == 1 }) // => true
