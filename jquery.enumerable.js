@@ -64,6 +64,16 @@
         }
       });
       return result;
+    },
+
+    compact: function(enumerable) {
+      var result = [];
+      for (var i = 0; i < enumerable.length; i++) {
+        if (enumerable[i]) {
+          result.push(enumerable[i]);
+        }
+      }
+      return result;
     }
   };
 
