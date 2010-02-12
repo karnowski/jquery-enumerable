@@ -1,30 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-  <head>
-    <script src="../vendor/screwunit/jquery-1.2.6.js"></script>
-    <script src="../vendor/screwunit/jquery.fn.js"></script>
-    <script src="../vendor/screwunit/jquery.print.js"></script>
-    <script src="../vendor/screwunit/screw.builder.js"></script>
-    <script src="../vendor/screwunit/screw.matchers.js"></script>
-    <script src="../vendor/screwunit/screw.events.js"></script>
-    <script src="../vendor/screwunit/screw.behaviors.js"></script>
-    
-    <script src="spec_helper.js"></script>
-    
-    <script src="../jquery.enumerable.js"></script>
-    
-    <script src="collect_spec.js"></script>
-    <script src="inject_spec.js"></script>
-    <script src="sum_spec.js"></script>
-    <script src="select_spec.js"></script>
-    <script src="reject_spec.js"></script>
-    <script src="any_spec.js"></script>
-    <script src="all_spec.js"></script>
-    <script src="detect_spec.js"></script>
-    <script src="compact_spec.js"></script>
+<head>
+  <title>Jasmine Test Runner</title>
+</head>
+<script type="text/javascript" src="../jasmine/lib/jasmine-0.10.0.js"></script>
+<script type="text/javascript" src="../jasmine/lib/TrivialReporter.js"></script>
+<script type="text/javascript" src="../jasmine/lib/consolex.js"></script>
 
-    <link rel="stylesheet" href="../vendor/screwunit/screw.css">
-  </head>
-  <body>
-    <div id="dom_test" style="position: absolute; left: -9999"></div>
-  </body>
+<script src="spec_helper.js"></script>
+<script src="../vendor/jquery-1.2.6.js"></script>
+<script src="../jquery.enumerable.js"></script>
+
+<link rel="stylesheet" type="text/css" href="../jasmine/lib/jasmine.css">
+
+<script type="text/javascript">
+  jasmine.include('collect_spec.js', true);
+  // jasmine.include('inject_spec.js', true);
+  // jasmine.include('sum_spec.js', true);
+  // jasmine.include('select_spec.js', true);
+  // jasmine.include('reject_spec.js', true);
+  // jasmine.include('any_spec.js', true);
+  // jasmine.include('all_spec.js', true);
+  // jasmine.include('detect_spec.js', true);
+  // jasmine.include('compact_spec.js', true);
+</script>
+
+<body>
+
+<script type="text/javascript">
+  var jasmineEnv = jasmine.getEnv();
+  jasmineEnv.reporter = new jasmine.TrivialReporter();
+  jasmineEnv.execute();
+</script>
+
+  <div id="dom_test" style="position: absolute; left: -9999"></div>
+
+</body>
 </html>

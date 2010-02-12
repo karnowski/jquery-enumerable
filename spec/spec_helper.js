@@ -1,9 +1,9 @@
-Screw.Unit(function() {
-  before(function() {
+// Screw.Unit(function() {
+  beforeEach(function() {
     $('dom_test').empty();
   });
 
-  Screw.Unit.enumerableContext = function(callStatic, callIterator, context) {
+  var enumerableContext = function(callStatic, callIterator, context) {
     var toArray = function() {
       var result = []
       for (var i = 0; i < this.length; i++)
@@ -29,7 +29,7 @@ Screw.Unit(function() {
               } catch(e) {
                 message = e
               }
-              expect(message).to(equal, 'callback needs to be a function, it was: null');
+              expect(message).toEqual('callback needs to be a function, it was: null');
             });
           });
         });
@@ -38,7 +38,7 @@ Screw.Unit(function() {
       expect_result: function(description, expected, f) {
         describeStaticAndIterator(function(x) {
           it(description, function() {
-            expect(f(x)).to(equal, expected);
+            expect(f(x)).toEqual(expected);
           });
         });
       }
@@ -47,5 +47,5 @@ Screw.Unit(function() {
 
     fn = new Function("with (enumerableHelpers) { " + contents.toString() + "}");
     fn();
-  }
-});
+  };
+// });
