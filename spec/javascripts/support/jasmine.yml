@@ -2,7 +2,7 @@
 src_files:
  - vendor/jquery-1.2.6.js
  - jquery.enumerable.js
- - spec/spec_helper.js
+ - spec/javascripts/spec_helper.js
 
 #  Return an array of stylesheet filepaths relative to src_dir to include before jasmine specs.
 #stylesheets:

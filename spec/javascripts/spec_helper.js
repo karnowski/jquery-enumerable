@@ -1,5 +1,6 @@
 beforeEach(function() {
-  $('dom_test').empty();
+  $('#dom_test').remove();
+  $("body").append('<div id="dom_test"/>');
 });
 
 var enumerableContext = function(callStatic, callIterator, context) {
